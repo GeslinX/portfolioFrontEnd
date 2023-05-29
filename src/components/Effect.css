@@ -1,0 +1,19 @@
+.animEffect canvas{
+    position: relative!important;
+    -webkit-mask-image: url(../assets/images/circle.svg);
+    mask-image: url(../assets/images/circle.svg);
+    -webkit-mask-repeat: repeat;
+    mask-repeat: repeat;
+    -webkit-mask-size: 177px;
+    mask-size: 177px;
+    -webkit-mask-position-x: -82px;
+    max-height: 354px;
+}
+.animEffect img{
+    position: absolute!important;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 450px;
+    width: 96%;
+}
