@@ -1,9 +1,9 @@
 
 import React from "react";
-import Banner from "./Banner";
-import About from "./About";
-import ProjectList from "./ProjectList";
-import Skills from "./Skills";
+const Banner = React.lazy(() => import("./Banner"));
+const About = React.lazy(() => import("./About"));
+const ProjectList = React.lazy(() => import("./ProjectList"));
+const Skills = React.lazy(() => import("./Skills"));
 
 export default function Home() {
   return (
