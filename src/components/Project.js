@@ -1,17 +1,47 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { useParams, useNavigate } from "react-router-dom";
+import { HashLink as Link } from 'react-router-hash-link';
+import images from '../index';
 
 const Project = () => {
+
+
+  const [activeProject, setActiveProject] = useState([]);
+  const params = useParams();
+  const navigate = useNavigate();
+  
+  useEffect(() => {
+    async function fetchData() {
+      const id = params.id.toString();
+      const response = await fetch(`http://localhost:5050/project/${params.id.toString()}`);
+ 
+      if (!response.ok) {
+        const message = `An error has occurred: ${response.statusText}`;
+        window.alert(message);
+        return;
+      }
+ 
+      const project = await response.json();
+      if (!project) {
+        window.alert(`project with id ${id} not found`);
+        navigate("/");
+        return;
+      }
+ 
+      setActiveProject(project);
+    }
+ 
+    fetchData();
+ 
+    return;
+  }, [params.id, navigate]);
     return (
-      <section id="about" className="py-20">
-        <div className="mx-auto sm:container">
-        </div>
-        <div className="container mx-auto px-2.5 flex flex-col items-left">
-            <h1 className="font-title mt-24 pb-2.5 text-3xl text-grey-gx">
-              À propos...
-            </h1>
-            <p className="font-body text-3xl sm:text-about font-semibold text-grey-gx uppercase">
-            Je suis <span className="text-orange-gx">UI/UX</span> Designer basé en île-de-France. Passionné par le numérique, j’aime créer des interfaces intuitives et attrayantes. Je m’inspire des tendances actuelles du design et je m’engage à offrir des solutions adaptées aux besoins des utilisateurs.
-            </p>
+      <section className="pt-5">
+        <div className="container mx-auto mt-24 px-2.5 flex flex-col items-center">
+            <Link to="/#projects">Back</Link>
+            <h1 className="font-body pb-2.5 text-4xl text-grey-gx uppercase text-center max-w-[calc(1600px_-_300px)]">{activeProject.title}</h1>
+            <p className="font-body text-xl text-center max-w-[calc(1600px_-_300px)]">{activeProject.info}</p>
+            <img src={images[`${activeProject.projectimg}`]} alt={activeProject.title} className="my-8 rounded-3xl shadow-2xl"/>
         </div>
       </section>
     );
