@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Disclosure } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import { HashLink as Link } from 'react-router-hash-link';
 
 const navigation = [
   { name: 'À propos', href: '/#about', current: false },
@@ -25,12 +26,12 @@ export default function Navbar() {
     }
     window.addEventListener('scroll',changeValueOnScroll);
   return (
-    <Disclosure as="nav" className={state ? "bg-white/70 sticky top-0 backdrop-blur-lg shadow-[0_2px_10px_-1px_rgba(0,0,0,0.1)] z-10" : "bg-transparent sticky top-0 transition-all ease-in-out duration-500 z-10"}>
+    <Disclosure as="nav" className={state ? "bg-white/70 fixed top-0 backdrop-blur-lg shadow-[0_2px_10px_-1px_rgba(0,0,0,0.1)] z-10 w-full" : "bg-transparent fixed top-0 transition-all ease-in-out duration-500 z-10 w-full"}>
       {({ open }) => (
         <>
           <div className="container mx-auto px-2.5">
-            <div className={state ? "relative flex py-3 sm:py-0 items-center justify-between" : "relative flex py-3 sm:py-0 items-center justify-between border-lightGrey-gx border-b-2 transition-all ease-in-out duration-500"}>
-              <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
+            <div className={state ? "relative flex py-3 lg:py-0 items-center justify-between" : "relative flex py-3 lg:py-0 items-center justify-between border-lightGrey-gx border-b-2 transition-all ease-in-out duration-500"}>
+              <div className="absolute inset-y-0 left-0 flex items-center lg:hidden">
                 {/* Mobile menu button*/}
                 <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                   <span className="sr-only">Open main menu</span>
@@ -41,11 +42,11 @@ export default function Navbar() {
                   )}
                 </Disclosure.Button>
               </div>
-              <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-between">
+              <div className="flex flex-1 items-center justify-center lg:items-stretch lg:justify-between">
                 <div className="flex flex-shrink-0 items-center">
-                  <a href="#banner" className="font-body text-2xl font-bold text-grey-gx uppercase">Xavier Geslin</a>
+                  <Link to="/#" className="font-body text-2xl font-bold text-grey-gx uppercase">Xavier Geslin</Link>
                 </div>
-                <div className="hidden sm:ml-6 sm:block">
+                <div className="hidden lg:ml-6 lg:block">
                   <div className={state ? "flex space-x-4 items-center" : "flex space-x-4 items-center mb-[-2px]"}>
                     {navigation.map((item) => (
                       <a
@@ -60,14 +61,14 @@ export default function Navbar() {
                         {item.name}
                       </a>
                     ))}
-                    <a href="#contact" className="font-body text-white bg-orange-gx hover:text-white rounded-full px-3 py-2 text-sm font-bold uppercase">Contact</a>
+                    <Link to="#contact" className="font-body text-white bg-orange-gx rounded-full px-3 py-2 text-sm font-bold uppercase"><span class="material-symbols-outlined leading-5 align-middle">download</span> Parcours Pro</Link>
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <Disclosure.Panel className="sm:hidden">
+          <Disclosure.Panel className="lg:hidden">
             <div className="space-y-1 px-2 pb-3 pt-2">
               {navigation.map((item) => (
                 <Disclosure.Button
@@ -83,7 +84,7 @@ export default function Navbar() {
                   {item.name}
                 </Disclosure.Button>
               ))}
-              <a href="#contact" className="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-bold font-body uppercase">Contact</a>
+              <Link to="#contact" className="text-white bg-orange-gx rounded-full inline-block px-3 py-2 text-base font-bold font-body uppercase"><span class="material-symbols-outlined leading-5 align-middle">download</span> Parcours Pro</Link>
             </div>
           </Disclosure.Panel>
         </>
