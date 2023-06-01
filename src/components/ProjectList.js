@@ -24,7 +24,7 @@ export default function ProjectList() {
     // This method fetches the projects from the database.
     useEffect(() => {
       async function getProjects() {
-        const response = await fetch(`https://portfolio-xavier-backend.onrender.com/project`);
+        const response = await fetch(`http://localhost:5050/project`);
    
         if (!response.ok) {
           const message = `An error occurred: ${response.statusText}`;
