@@ -11,7 +11,7 @@ function importAll(r) {
    r.keys().forEach((item, index) => { images[item.replace('./', '')] = r(item); });
   return images
  }
- const images = importAll(require.context('./assets/images', false, /\.(png|jpe?g|svg)$/));
+ const images = importAll(require.context('./assets/images', false, /\.(png|jpe?g|webp|svg)$/));
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
