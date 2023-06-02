@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, Suspense } from "react";
+import SkeletonProject from "./SkeletonProject";
 import { Link } from "react-router-dom";
 import images from '../index';
 
@@ -46,10 +47,9 @@ export default function ProjectList() {
     function projectList() {
       return projects.map((project) => {
         return (
-          <Project
-            project={project}
-            key={project._id}
-          />
+          <Suspense fallback={<SkeletonProject />}>
+            <Project project={project} key={project._id} />
+          </Suspense>
         );
       });
     }
