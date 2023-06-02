@@ -35,6 +35,7 @@ const Project = () => {
  
     return;
   }, [params.id, navigate]);
+  TabTitle(`Xavier Geslin - Portfolio | ${activeProject.title}`);
     return (
       <section className="pt-5">
         <div className="container mx-auto mt-24 px-2.5 flex flex-col items-center max-w-[calc(1600px_-_300px)] relative">
