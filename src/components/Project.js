@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { HashLink as Link } from 'react-router-hash-link';
+import { TabTitle } from "./TabTitle";
 import images from '../index';
 
 const Project = () => {
