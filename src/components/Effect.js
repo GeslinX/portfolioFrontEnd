@@ -32,7 +32,7 @@ class Effect extends React.Component {
   render() {
     return (
     <div ref={this.vantaRef} className="animEffect">
-      <img src={images['memoji.png']} alt="Profil Xavier"/>
+      <img src={images['memoji.webp']} alt="Profil Xavier"/>
     </div>
       );
   }
