@@ -17,7 +17,7 @@ export default function ProjectList() {
     useEffect(() => {
       setTimeout(() => {
         getProjects()
-      }, 5000)
+      }, 0)
     }, [])
 
     const Project = () => {
