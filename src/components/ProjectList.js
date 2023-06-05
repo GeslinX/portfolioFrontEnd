@@ -8,8 +8,8 @@ import './ProjectList.css'
 export default function ProjectList() {
     const [projects, setProjects] = useState([]);
     // This method fetches the projects from the database.
-    const getProjects = () => {
-      fetch(`https://portfolio-xavier-backend.onrender.com/project`)
+    const getProjects = async () => {
+      await fetch(`https://portfolio-xavier-backend.onrender.com/project`)
       .then((res) => res.json())
       .then((json) => setProjects(json))
       .catch((e) => console.log(e))
