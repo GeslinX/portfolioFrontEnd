@@ -26,7 +26,7 @@ export default function ProjectList() {
           {projects.map((project) => {
             return (
               <Link to={`/project/${project._id}`}>
-                <div className="inline-block snap-start" role="listitem">
+                <div className="inline-block snap-start">
                     <div className="translate-x-[calc(max(1600px,100vw)/_2_-_790px)]">
                         <div className="cardsScroller mr-5 w-[350px] sm:w-[460px] flex overflow-hidden relative rounded-2xl shadow-[0_2px_10px_-1px_rgba(0,0,0,0.1)] whitespace-normal">
                             <img src={images[`${project.images}`]} alt={project.title} loading="lazy" width="480" height="610"/>
@@ -50,7 +50,7 @@ export default function ProjectList() {
               .fill()
               .map((project,index) => {
                 return (
-                  <div className="inline-block snap-start" role="listitem" key={index}>
+                  <div className="inline-block snap-start" key={index}>
                     <div className="translate-x-[calc(max(1600px,100vw)/_2_-_790px)]">
                         <div className="cardsScroller mr-5 w-[350px] sm:w-[460px] flex overflow-hidden relative rounded-2xl shadow-[0_2px_10px_-1px_rgba(0,0,0,0.1)] whitespace-normal">
                           <Skeleton />
@@ -68,7 +68,7 @@ export default function ProjectList() {
                 <h1 className="flex flex-col items-start sm:flex-row sm:items-center"><span className='font-body text-grey-gx font-black text-5xl sm:text-7xl uppercase'>Projets.</span><span className='font-title text-lightGrey-gx font-regular text-2xl sm:text-4xl'>Designed with passion</span></h1>
             </div>
             <div id="scollerContent">
-                <div className="w-full whitespace-nowrap inline-flex overflow-x-scroll snap-mandatory snap-x align-top overscroll-x-contain" id="scrollerPlatter" role="list">
+                <div className="w-full whitespace-nowrap inline-flex overflow-x-scroll snap-mandatory snap-x align-top overscroll-x-contain" id="scrollerPlatter">
                   {projects.length > 0 ? Project() : showSkeleton()}
                 </div>
             </div>
