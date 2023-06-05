@@ -40,7 +40,7 @@ const Project = () => {
     return (
       <section className="pt-5">
         <div className="container mx-auto mt-24 px-2.5 flex flex-col items-center max-w-[calc(1600px_-_300px)] relative">
-            <Link to="/#projects" className="absolute left-0">Back</Link>
+          <Link to="/#projects"><span class="material-symbols-outlined align-middle">arrow_back</span> Retour</Link>
             <h1 className="font-body pb-2.5 text-4xl text-grey-gx uppercase text-center">{activeProject.title}</h1>
             <p className="font-body text-xl text-center">{activeProject.info}</p>
             <img src={images[`${activeProject.projectimg}`]} alt={activeProject.title} className="my-8 rounded-3xl shadow-2xl"/>
