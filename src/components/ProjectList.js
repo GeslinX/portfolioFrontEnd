@@ -3,6 +3,7 @@ import Skeleton from 'react-loading-skeleton'
 import { Link } from "react-router-dom";
 import images from '../index';
 import 'react-loading-skeleton/dist/skeleton.css'
+import './ProjectList.css'
 
 export default function ProjectList() {
     const [projects, setProjects] = useState([]);
@@ -52,7 +53,7 @@ export default function ProjectList() {
                   <div className="inline-block snap-start" role="listitem" key={index}>
                     <div className="translate-x-[calc(max(1600px,100vw)/_2_-_790px)]">
                         <div className="cardsScroller mr-5 w-[350px] sm:w-[460px] flex overflow-hidden relative rounded-2xl shadow-[0_2px_10px_-1px_rgba(0,0,0,0.1)] whitespace-normal">
-                          <Skeleton height={590} width={460} />
+                          <Skeleton />
                         </div>
                     </div>
                 </div>
