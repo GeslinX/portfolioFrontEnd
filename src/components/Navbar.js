@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Disclosure, Transition } from '@headlessui/react'
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import { Bars3Icon, XMarkIcon, ArrowDownTrayIcon } from '@heroicons/react/24/outline'
 import { HashLink as Link } from 'react-router-hash-link';
 import './Navbar.css';
 import pdf from '../assets/images/XGcv2023.pdf';
@@ -61,7 +61,7 @@ export default function Navbar() {
                         {item.name}
                       </a>
                     ))}
-                    <a href={pdf} target='_blank' rel='noreferrer' className="font-body text-white bg-orange-gx rounded-full px-3 py-2 text-sm font-bold uppercase"><span className="material-symbols-outlined leading-5 align-middle">download</span> Parcours Pro</a>
+                    <a href={pdf} target='_blank' rel='noreferrer' className="font-body text-white bg-orange-gx rounded-full px-3 py-2 text-sm font-bold uppercase"><ArrowDownTrayIcon className="inline-block h-6 w-6" aria-hidden="true" /> Parcours Pro</a>
                   </div>
                 </div>
               </div>
@@ -99,7 +99,7 @@ export default function Navbar() {
                     {item.name}
                   </Disclosure.Button>
                 ))}
-                <a href={pdf} target='_blank' rel='noreferrer' className="text-orange-gx block mt-4 px-3 py-2 text-2xl font-bold font-title"><span className="material-symbols-outlined leading-5 align-middle">download</span> Parcours Pro</a>
+                <a href={pdf} target='_blank' rel='noreferrer' className="text-orange-gx block mt-4 px-3 py-2 text-2xl font-bold font-title"><ArrowDownTrayIcon className="inline-block h-6 w-6" aria-hidden="true" /> Parcours Pro</a>
                 </Transition.Child>
               </div>
             </Disclosure.Panel>
