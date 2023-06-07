@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { HashLink as Link } from 'react-router-hash-link';
 import { TabTitle } from "./TabTitle";
+import { ArrowUturnLeftIcon } from '@heroicons/react/24/outline'
 import images from '../index';
 
 const Project = () => {
@@ -40,7 +41,7 @@ const Project = () => {
     return (
       <section className="pt-5">
         <div className="container mx-auto mt-24 flex flex-col items-start max-w-[calc(1600px_-_300px)]">
-          <Link to="/#projects"><span className="material-symbols-outlined align-middle">arrow_back</span> Retour</Link>
+          <Link to="/#projects"><ArrowUturnLeftIcon className="inline-block h-5 w-5" aria-hidden="true" /> Retour</Link>
         </div>
         <div className="container mx-auto px-2.5 flex flex-col items-center max-w-[calc(1600px_-_300px)]">
             <h1 className="font-body pb-2.5 text-4xl text-grey-gx uppercase text-center">{activeProject.title}</h1>
