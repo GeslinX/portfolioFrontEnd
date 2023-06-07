@@ -1,0 +1,9 @@
+
+#box {
+    background: #2D2D2C;
+}
+@media (min-width: 1536px) {
+    #box {
+        background: url(../assets/images/bgServices.svg) no-repeat left bottom, #2D2D2C;
+    }
+}
