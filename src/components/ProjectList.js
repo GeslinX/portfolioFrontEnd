@@ -8,7 +8,7 @@ import 'react-loading-skeleton/dist/skeleton.css';
 import './ProjectList.css';
 
     const fetchProjects = async () => {
-      const response = await axios.get('http://localhost:5050/project');
+      const response = await axios.get('https://portfolio-xavier-backend.onrender.com/project');
       return response.data;
     }
     const ProjectsList = () => {
