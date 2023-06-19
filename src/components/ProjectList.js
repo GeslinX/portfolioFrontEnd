@@ -46,23 +46,21 @@ import './ProjectList.css';
               </div>
               <div id="scollerContent">
                   <div className="w-full whitespace-nowrap inline-flex overflow-x-scroll snap-mandatory snap-x align-top overscroll-x-contain" id="scrollerPlatter">
-                    {data.map((project) => {
-                      return (
+                      {data.slice(0, 2).map((project, index) => (
                         <Link to={`/project/${project._id}`} key={project._id}>
                           <div className="inline-block snap-start">
-                              <div className="translate-x-[calc(max(1600px,100vw)/_2_-_790px)]">
-                                  <div className="cardsScroller mr-5 w-[350px] sm:w-[460px] flex overflow-hidden relative rounded-2xl shadow-[0_2px_10px_-1px_rgba(0,0,0,0.1)] whitespace-normal">
-                                      <img src={images[`${project.images}`]} alt={project.title} loading="lazy" width="480" height="610"/>
-                                      <div className="absolute p-10 bottom-0">
-                                          <span style={{color: project.color}} className={'font-body px-3 py-1 bg-white font-black text-sm uppercase rounded-full'}>{project.tags}</span>
-                                          <h2 className="font-body text-white font-bold text-3xl max-w-[285px]">{project.title}</h2>
-                                      </div>
-                                  </div>
+                            <div className="translate-x-[calc(max(1600px,100vw)/_2_-_790px)]">
+                              <div className="cardsScroller mr-5 w-[350px] sm:w-[460px] flex overflow-hidden relative rounded-2xl shadow-[0_2px_10px_-1px_rgba(0,0,0,0.1)] whitespace-normal">
+                                <img src={images[project.images]} alt={project.title} loading="lazy" width="480" height="610"/>
+                                <div className="absolute p-10 bottom-0">
+                                  <span style={{ color: project.color }} className="font-body px-3 py-1 bg-white font-black text-sm uppercase rounded-full">{project.tags}</span>
+                                  <h2 className="font-body text-white font-bold text-3xl max-w-[285px]">{project.title}</h2>
+                                </div>
                               </div>
+                            </div>
                           </div>
                         </Link>
-                        )
-                      })}
+                      ))}
                   </div>
               </div>
           </section>
