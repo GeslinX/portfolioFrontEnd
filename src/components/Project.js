@@ -14,7 +14,7 @@ const Project = () => {
   useEffect(() => {
     async function fetchData() {
       const id = params.id.toString();
-      const response = await fetch(`http://localhost:5050/project/${params.id.toString()}`);
+      const response = await fetch(`https://portfolio-xavier-backend.onrender.com/project/${params.id.toString()}`);
  
       if (!response.ok) {
         const message = `An error has occurred: ${response.statusText}`;
