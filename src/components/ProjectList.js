@@ -46,7 +46,7 @@ import './ProjectList.css';
               </div>
               <div id="scollerContent">
                   <div className="w-full whitespace-nowrap inline-flex overflow-x-scroll snap-mandatory snap-x align-top overscroll-x-contain" id="scrollerPlatter">
-                      {data.slice(0, 2).map((project, index) => (
+                      {data.slice(0, 4).map((project, index) => (
                         <Link to={`/project/${project._id}`} key={project._id}>
                           <div className="inline-block snap-start">
                             <div className="translate-x-[calc(max(1600px,100vw)/_2_-_790px)]">
