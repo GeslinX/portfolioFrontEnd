@@ -26,10 +26,10 @@ export default function Navbar() {
     document.body.classList.toggle('no-scroll');
   }
   return (
-    <Disclosure as="nav" className={state ? "bg-white/70 fixed top-0 backdrop-blur-lg shadow-[0_2px_10px_-1px_rgba(0,0,0,0.1)] z-10 w-full" : "bg-transparent fixed top-0 transition-all ease-in-out duration-500 z-10 w-full"}>
+    <Disclosure as="nav" className={state ? "bg-[#f4f2f166] fixed top-4 inset-x-[1rem] backdrop-blur-3xl shadow-[0_2px_10px_-1px_rgba(0,0,0,0.1)] z-10 px-4 rounded-2xl saturate-[200%]" : "bg-transparent fixed top-4 inset-x-[1rem] transition-all ease-in-out duration-500 z-10 px-4 rounded-2xl"}>
       {({ open }) => (
         <>
-          <div className="container mx-auto px-2.5">
+          <div className="mx-auto px-2.5">
             <div className={state ? "relative flex py-3 lg:py-0 items-center justify-between" : "relative flex py-3 lg:py-0 items-center justify-between border-lightGrey-gx border-b-2 transition-all ease-in-out duration-500"}>
               <div className="absolute inset-y-0 left-0 flex items-center lg:hidden">
                 {/* Mobile menu button*/}
