@@ -26,7 +26,7 @@ export default function Navbar() {
     document.body.classList.toggle('no-scroll');
   }
   return (
-    <Disclosure as="nav" className={state ? "bg-[#f4f2f166] fixed top-4 inset-x-[1rem] backdrop-blur-3xl shadow-[0_2px_10px_-1px_rgba(0,0,0,0.1)] z-10 px-4 rounded-2xl saturate-[200%]" : "bg-transparent fixed top-4 inset-x-[1rem] transition-all ease-in-out duration-500 z-10 px-4 rounded-2xl"}>
+    <Disclosure as="nav" className={state ? "bg-[#f4f2f166] fixed top-4 inset-x-[1rem] backdrop-blur-3xl shadow-[0_2px_10px_-1px_rgba(0,0,0,0.1)] z-10 sm:px-4 rounded-2xl saturate-[200%]" : "bg-transparent fixed top-4 inset-x-[1rem] transition-all ease-in-out duration-500 z-10 sm:px-4 rounded-2xl"}>
       {({ open }) => (
         <>
           <div className="mx-auto px-2.5">
