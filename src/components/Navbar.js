@@ -76,7 +76,7 @@ export default function Navbar() {
             leaveFrom="transform translate-y-[0] opacity-100"
             leaveTo="transform translate-y-[-100%] opacity-0"
           >
-            <Disclosure.Panel static className="bg-grey-gx h-[101vh] mt-[-58px] flex z-[1] relative justify-center items-center lg:hidden">
+            <Disclosure.Panel static className="bg-grey-gx h-[101vh] mt-[-58px] flex z-[1] absolute inset-x-[-1rem] top-[-1rem] justify-center items-center lg:hidden">
               <div className="space-y-1 px-2 pb-3 pt-2 flex gap-y-8 justify-center items-center flex-col">
                 
                 <Transition.Child
