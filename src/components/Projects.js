@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import useFetch from '../hooks/useFetch';
 
     const ProjectsList = () => {
-      const { loading, error, project } = useFetch('http://localhost:1337/api/projects?populate=*');
+      const { loading, error, project } = useFetch('https://portfolio-strapi-tzlm.onrender.com/api/projects?populate=*');
       if (loading) return <p> Loading... </p>;
       if (error) return <p> Error... </p>;
       return(
