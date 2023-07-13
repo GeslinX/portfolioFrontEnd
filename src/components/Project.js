@@ -6,7 +6,7 @@ import useFetch from '../hooks/useFetch';
 
 const Project = () => {
   const { id } = useParams();
-  const { loading, error, project } = useFetch('http://localhost:1337/api/projects/' + id + '?populate=*');
+  const { loading, error, project } = useFetch('https://portfolio-strapi-tzlm.onrender.com/api/projects/' + id + '?populate=*');
   if (loading) return <p> Loading... </p>;
   if (error) return <p> Error... </p>;
   
