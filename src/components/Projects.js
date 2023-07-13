@@ -15,7 +15,7 @@ import useFetch from '../hooks/useFetch';
                           <div className="inline-block snap-start">
                             <div className="translate-x-[calc(max(1600px,100vw)/_2_-_790px)]">
                               <div className="cardsScroller mr-5 w-[350px] sm:w-[460px] flex overflow-hidden relative rounded-2xl shadow-[0_2px_10px_-1px_rgba(0,0,0,0.1)] whitespace-normal">
-                                <img src={`http://localhost:1337${item.attributes.tuile.data.attributes.url}`} alt={item.attributes.name} loading="lazy" width="480" height="610"/>
+                                <img src={`${item.attributes.tuile.data.attributes.url}`} alt={item.attributes.name} loading="lazy" width="480" height="610"/>
                                 <div style={{color : item.attributes.color}}  className="absolute p-10 bottom-0">
                                 {item.attributes.tags.data ? (
                                       item.attributes.tags.data.map((tag) => (
