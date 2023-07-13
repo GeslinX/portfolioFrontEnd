@@ -21,7 +21,7 @@ const Project = () => {
               <h1 className="font-body font-semibold pb-2.5 text-4xl text-grey-gx uppercase text-center">{project.attributes.name}</h1>
               <p className="font-body text-xl text-center">{project.attributes.info}</p>
               {project.attributes.link ? <Link to={`${project.attributes.link}`} target="_blank" className="myLink font-body text-xl text-center text-grey-gx hover:text-orange-gx hover:font-bold">Voir la page</Link> : null}
-              <img src={`http://localhost:1337${project.attributes.projectimg.data.attributes.url}`} alt={project.attributes.name} className="my-8 rounded-3xl shadow-2xl"/>
+              <img src={`https://portfolio-strapi-tzlm.onrender.com${project.attributes.projectimg.data.attributes.url}`} alt={project.attributes.name} className="my-8 rounded-3xl shadow-2xl"/>
           </div>
         </section>
       </div>
