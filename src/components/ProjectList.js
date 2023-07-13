@@ -6,7 +6,7 @@ import 'react-loading-skeleton/dist/skeleton.css';
 import './ProjectList.css';
 
     const ProjectsList = () => {
-      const { loading, error, project } = useFetch('http://localhost:1337/api/projects?populate=*');
+      const { loading, error, project } = useFetch('https://portfolio-strapi-tzlm.onrender.com/api/projects?populate=*');
       if (loading) {
         return (        
           <section id="projects">
